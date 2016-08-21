@@ -1,0 +1,197 @@
+// Menu responsive
+.r-overlay
+	position fixed
+	top 0
+	left 0
+	background-color black
+	z-index 1000
+	width 100%
+	height 100%
+	visibility hidden
+	opacity 0
+	cursor pointer
+	transition all 0.65s ease
+.w-nav
+	display none
+	position absolute
+	top 0
+	right 0
+	font-size 2em
+	z-index 1001
+.menu-mobile
+	cursor pointer
+	visibility visible
+	opacity 1
+	transform scale(1,1)
+	transition all 0.45s cubic-bezier(.89,1.5,.8,1.06)
+.menu-mobile-close
+	cursor pointer
+	position fixed
+	top 0
+	right 0
+	visibility hidden
+	opacity 0
+	transform scale(0,0)
+	transition all 0.45s cubic-bezier(.89,1.5,.8,1.06)
+.menu-responsive
+	width 200px
+	height 100%
+	overflow hidden
+	position fixed
+	top 0
+	right -200px
+	background white
+	z-index 1000
+	transition right 0.45s ease
+	&>ul
+		padding-top 2em
+		&>li
+			a
+				display block
+				height 2em
+				line-height 2em
+				padding-left 1em
+				&:hover
+					background-color gray
+			.active1
+				background-color gray
+	.u-submenu
+		display none
+		&>li
+			&>a
+				text-indent 1em
+	.active
+		color red
+.active-menu
+	right 0
+.active-overlay
+	visibility visible
+	opacity 0.8
+.active-menu-mobile
+	visibility hidden
+	opacity 0
+	transform scale(0,0)
+	transition all 0.45s cubic-bezier(.89,1.5,.8,1.06)
+.active-menu-mobile-close
+	visibility visible
+	opacity 1
+	transform scale(1,1)
+
+.cnt-wrapper,.footer
+	position relative
+	left 0
+	transition left 0.45s ease
+.active-cnt-wrapper,.active-footer
+	left -200px
+	
+// Menu desktop
+.nav-list
+	&>ul
+		&>li
+			position relative
+			&:hover .u-submenu
+				display block
+.nav-list
+	.u-submenu
+		position absolute
+		top 1em
+		left 0
+		display none
+.header
+	.nav-list
+		li
+			display inline-block
+
+// Logo
+.header
+	text-align center
+	position fixed
+	z-index 1
+	top 0
+	left 0
+	right 0
+	width 100%
+	background white
+	transition all .38s ease
+	box-shadow rgba(0,0,0,0.09) 0 0 0 1px,rgba(0,0,0,0.09) 0 2px 23px 0
+	.cnt 
+		position relative
+	.w-logo
+		display block
+		line-height 0
+		position absolute
+		top 0
+		left 0
+		figure
+			display inline-block
+			width 150px
+			width 100px
+			transition .38s ease
+			img
+				display block
+				max-width 100%
+				height auto
+	.nav-list
+		height 80px 
+		line-height 80px 
+		
+		height 50px 
+		line-height 50px
+		float right
+		ul
+			li
+				a
+					display block 
+					padding 0 10px
+					margin-left 10px 
+					color plomo
+					transition all .35s ease
+					&:hover
+						color negro
+
+// *** FOOTER ***
+.footer
+	// Footer bottom
+	background #28282e
+	color plomo
+	.copyright
+		background-color base
+		overflow hidden
+		font-size 12px
+		height 4em
+		.from
+			float left
+			p
+				margin 0
+		.by
+			float right
+			color gray
+			.marca
+				position relative
+				padding-right 0.45em
+				transition all 0.25s ease
+			a
+				&:hover .marca
+					color white
+	.w-copyright
+		margin-top 1.5em
+
+@media screen and (max-width: 960px)
+	.nav-list
+		display none
+	.w-nav
+		display block
+
+@media screen and (max-width: 480px)
+	.footer
+		.w-copyright
+			margin 0
+			padding 1.5em 0
+		.copyright
+			height auto
+			text-align center
+			.from
+				float none
+				margin-bottom 0.4em
+			.by
+				float none

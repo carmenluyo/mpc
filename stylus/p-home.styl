@@ -1,0 +1,240 @@
+// ELIMINA TODO E INICIA TUS ESTILOS
+.page-home
+	.section
+		background-position center center
+		background-size cover
+		background-repeat no-repeat
+		h2 
+			text-transform uppercase
+			font-family helvetica-Md
+			font-size 28px
+			margin 0 0 20px
+			position relative 
+			&:after
+				content ''
+				background rojo
+				width 60px 
+				height 2px 
+				display block 
+				margin 0
+				position absolute
+				bottom -10px
+				left 0
+	.welcome
+		min-height 650px
+		height 100%
+		.content
+			max-width 50%
+			p
+				padding-right 20%
+		.down
+			position absolute 
+			bottom 5%
+			left 0
+			right 0
+			font-size 30px
+			color negro
+			text-align center
+			span
+				font-size 15px
+				display block
+				margin 0 0 5px
+
+	.products
+		background #f6f6f6
+		.products-list
+			.products-item
+				float left 
+				width 33.3333%
+				position relative
+				box-sizing border-box
+				padding 40px 20px
+				.content 
+					background white 
+					box-shadow rgba(0,0,0,0.09) 0 0 0 1px
+					border-radius 3px 
+					color plomo
+					display block
+					position relative
+					overflow-x hidden
+					overflow-y hidden
+					transition all .2s ease
+					figure 
+						overflow hidden
+						display block
+						width 100%
+						height 100%
+						position relative
+						max-width 150px
+						min-height 200px
+						text-align center
+						margin auto
+						padding-top 20px
+						img
+							width 100%
+							max-width 100%
+							height auto
+							display block 
+							vertical-align top
+							transition transform 60ms
+							transform scale(1)
+							
+				.title
+					font-family helvetica-Md
+					font-size 16px
+				.cnt 
+					padding 20px 
+					font-size 14px
+					.text 
+						margin 0 0 4px
+						font-family helvetica-Th
+						*
+							margin 0
+							font-family inherit
+							line-height inherit
+							font-size inherit 
+							
+				&:hover
+					.content 
+						box-shadow rgba(0,0,0,0.09) 0 0 0 1px,rgba(0,0,0,0.09) 0 2px 23px 0
+						transform translate(0,-3px)
+						figure
+							img
+								transition 1000ms
+								transform scale(1.06)
+							
+		#pagination
+			display block 
+			margin auto
+			clear()
+			width 50%
+			text-align center
+			padding 10px 0
+			max-width 220px
+			a
+				font-size 0
+				display block
+				float left
+				width 30px 
+				height 4px 
+				border 1px solid rojo 
+				margin-left 10px
+				transition all .3s ease
+				&:hover
+					background rojo
+			.selected
+				background rojo
+		.controls
+			clear()
+			padding-right 20px
+			a
+				float right 
+				width 50px
+				height 40px
+				border 1px solid #ccc
+				font-size 0
+				text-align center
+				display block
+				transition all .3s ease
+				&:before
+					font-size 30px
+					line-height 40px
+				&:hover
+					border 1px solid rojo
+					&:before
+						color rojo
+	.services
+		h2 
+			width 28%
+			display inline-block
+			vertical-align middle
+		.list-servicios
+			font-size 0
+			display inline-block
+			vertical-align middle
+			width 70%
+			.item-servicio
+				background rgba(255,255,255,0.70)
+				box-shadow rgba(0,0,0,0.09) 0 0 0 1px
+				display inline-block
+				padding 8% 4%
+				position relative
+				vertical-align top
+				width 25%
+				transition all .3s ease
+				&:hover
+					background rgba(192,37,44,0.70)
+					h3
+						color white
+						&:before
+							content ''
+							background white
+						
+				.content 
+					font-size 15px
+					centerY()
+					text-align center
+					text-transform uppercase
+				h3
+					position relative
+					font-family helvetica-Bd
+					&:before
+						content ''
+						position absolute
+						bottom 0
+						left 0
+						right 0
+						width 50px
+						background rojo
+						display block 
+						height 2px
+				p
+					margin auto
+					
+					
+
+	#google-maplima
+		height 100%
+		
+.fp-viewing-welcome
+	.header 
+		bacground none
+		background transparent
+		box-shadow none
+	.header .w-logo figure
+		width 150px
+	.header .nav-list
+		height 80px 
+		line-height 80px 
+.fp-viewing-contact
+	.footer 
+		position absolute
+		bottom 0
+		left 0
+		right 0
+		width 100%
+		
+
+@media screen and (max-width: 1024px)
+	.page-home .services .list-servicios .item-servicio
+		width 42%
+@media screen and (max-width: 768px)
+	.page-home .services h2
+		display block
+		text-align center
+		max-width 320px
+		width 100%
+		margin 0 auto 40px auto
+		&:after
+			left 0
+	.page-home .services .list-servicios
+		width 100%
+	.page-home .services .list-servicios .item-servicio
+		width 42%
+@media screen and (max-width: 768px)
+	.footer
+		position relative	
+@media screen and (max-width: 480px)
+	.page-home .services .list-servicios .item-servicio
+		padding 8% 0
+		width 100%

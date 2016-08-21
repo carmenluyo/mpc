@@ -1,0 +1,17 @@
+/* BASE */
+html,body{
+	height:auto;
+}
+.cnt-wrapper{
+	min-height: 0;
+}
+.wrapper{
+	padding-bottom:0;
+	overflow:auto;
+}
+.footer{
+	position: static;
+	margin-top:0;
+	clear:none;
+}
+/* FIN-BASE */
